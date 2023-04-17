@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		910B51EA29D2E4B800EEF1E2 /* RecentAccountCredits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B51E929D2E4B800EEF1E2 /* RecentAccountCredits.swift */; };
+		910B51EC29D2F56C00EEF1E2 /* WhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B51EB29D2F56C00EEF1E2 /* WhatsNewView.swift */; };
+		910B51EF29D2F7DC00EEF1E2 /* What's New.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 910B51ED29D2F7DC00EEF1E2 /* What's New.xcdatamodeld */; };
+		913328AB29ED33FA00CBA0E0 /* GoalsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913328AA29ED33FA00CBA0E0 /* GoalsViewViewModel.swift */; };
+		913B1BDC29AF1F4A002C5563 /* TransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B1BDB29AF1F4A002C5563 /* TransactionList.swift */; };
+		914BFA6B29ECDC7100703A8E /* SwiftUIFontIcon in Frameworks */ = {isa = PBXBuildFile; productRef = 914BFA6A29ECDC7100703A8E /* SwiftUIFontIcon */; };
+		914BFA6E29ECDC7B00703A8E /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 914BFA6D29ECDC7B00703A8E /* Collections */; };
+		914BFA7029ECDC7B00703A8E /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 914BFA6F29ECDC7B00703A8E /* DequeModule */; };
+		914BFA7229ECDC7B00703A8E /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 914BFA7129ECDC7B00703A8E /* OrderedCollections */; };
+		914BFA7529ECDC8300703A8E /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 914BFA7429ECDC8300703A8E /* SwiftUICharts */; };
+		914BFA7829ECDC8A00703A8E /* SwiftPieChart in Frameworks */ = {isa = PBXBuildFile; productRef = 914BFA7729ECDC8A00703A8E /* SwiftPieChart */; };
 		9178244C29AC703600CA7E87 /* Fundy_2_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178244B29AC703600CA7E87 /* Fundy_2_0App.swift */; };
 		9178244E29AC703600CA7E87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178244D29AC703600CA7E87 /* ContentView.swift */; };
 		9178245029AC703800CA7E87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9178244F29AC703800CA7E87 /* Assets.xcassets */; };
@@ -16,6 +27,18 @@
 		9178246229AC703800CA7E87 /* Fundy_2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178246129AC703800CA7E87 /* Fundy_2_0Tests.swift */; };
 		9178246C29AC703800CA7E87 /* Fundy_2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178246B29AC703800CA7E87 /* Fundy_2_0UITests.swift */; };
 		9178246E29AC703800CA7E87 /* Fundy_2_0UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178246D29AC703800CA7E87 /* Fundy_2_0UITestsLaunchTests.swift */; };
+		9178247B29AC71B500CA7E87 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178247A29AC71B500CA7E87 /* Extensions.swift */; };
+		9178247D29AC8DD800CA7E87 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178247C29AC8DD800CA7E87 /* TransactionModel.swift */; };
+		9178247F29AC8F3500CA7E87 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178247E29AC8F3500CA7E87 /* PreviewData.swift */; };
+		9178248129AC901F00CA7E87 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178248029AC901F00CA7E87 /* TransactionRow.swift */; };
+		9178248629AC955500CA7E87 /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178248529AC955500CA7E87 /* TransactionListViewModel.swift */; };
+		9178248829AC9AA600CA7E87 /* RecentTransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178248729AC9AA600CA7E87 /* RecentTransactionList.swift */; };
+		91F4110E29D290BB003FCA5B /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4110D29D290BB003FCA5B /* GoalsView.swift */; };
+		91F4111029D290C7003FCA5B /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4110F29D290C7003FCA5B /* NotificationsView.swift */; };
+		91F4111229D290D0003FCA5B /* AdviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4111129D290D0003FCA5B /* AdviceView.swift */; };
+		91F4111429D29D27003FCA5B /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4111329D29D27003FCA5B /* OverviewView.swift */; };
+		91F4111E29D2A70E003FCA5B /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4111D29D2A70E003FCA5B /* LoginScreen.swift */; };
+		91F4112029D2AE72003FCA5B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F4111F29D2AE72003FCA5B /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +59,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		910B51E929D2E4B800EEF1E2 /* RecentAccountCredits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentAccountCredits.swift; sourceTree = "<group>"; };
+		910B51EB29D2F56C00EEF1E2 /* WhatsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewView.swift; sourceTree = "<group>"; };
+		910B51EE29D2F7DC00EEF1E2 /* What's New.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "What's New.xcdatamodel"; sourceTree = "<group>"; };
+		913328AA29ED33FA00CBA0E0 /* GoalsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewViewModel.swift; sourceTree = "<group>"; };
+		913B1BDB29AF1F4A002C5563 /* TransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionList.swift; sourceTree = "<group>"; };
 		9178244829AC703600CA7E87 /* Fundy 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fundy 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9178244B29AC703600CA7E87 /* Fundy_2_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fundy_2_0App.swift; sourceTree = "<group>"; };
 		9178244D29AC703600CA7E87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +76,18 @@
 		9178246729AC703800CA7E87 /* Fundy 2.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fundy 2.0UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9178246B29AC703800CA7E87 /* Fundy_2_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fundy_2_0UITests.swift; sourceTree = "<group>"; };
 		9178246D29AC703800CA7E87 /* Fundy_2_0UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fundy_2_0UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9178247A29AC71B500CA7E87 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9178247C29AC8DD800CA7E87 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		9178247E29AC8F3500CA7E87 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		9178248029AC901F00CA7E87 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
+		9178248529AC955500CA7E87 /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
+		9178248729AC9AA600CA7E87 /* RecentTransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionList.swift; sourceTree = "<group>"; };
+		91F4110D29D290BB003FCA5B /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
+		91F4110F29D290C7003FCA5B /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		91F4111129D290D0003FCA5B /* AdviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceView.swift; sourceTree = "<group>"; };
+		91F4111329D29D27003FCA5B /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
+		91F4111D29D2A70E003FCA5B /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		91F4111F29D2AE72003FCA5B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +95,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				914BFA6E29ECDC7B00703A8E /* Collections in Frameworks */,
+				914BFA6B29ECDC7100703A8E /* SwiftUIFontIcon in Frameworks */,
+				914BFA7829ECDC8A00703A8E /* SwiftPieChart in Frameworks */,
+				914BFA7229ECDC7B00703A8E /* OrderedCollections in Frameworks */,
+				914BFA7029ECDC7B00703A8E /* DequeModule in Frameworks */,
+				914BFA7529ECDC8300703A8E /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +124,8 @@
 		9178243F29AC703600CA7E87 = {
 			isa = PBXGroup;
 			children = (
+				91E31B4F29D3E4720049C54D /* Packages */,
+				910B51ED29D2F7DC00EEF1E2 /* What's New.xcdatamodeld */,
 				9178244A29AC703600CA7E87 /* Fundy 2.0 */,
 				9178246029AC703800CA7E87 /* Fundy 2.0Tests */,
 				9178246A29AC703800CA7E87 /* Fundy 2.0UITests */,
@@ -98,12 +146,21 @@
 		9178244A29AC703600CA7E87 /* Fundy 2.0 */ = {
 			isa = PBXGroup;
 			children = (
-				9178244B29AC703600CA7E87 /* Fundy_2_0App.swift */,
 				9178244D29AC703600CA7E87 /* ContentView.swift */,
+				91F4110C29D2906A003FCA5B /* Views */,
+				9178244B29AC703600CA7E87 /* Fundy_2_0App.swift */,
+				910B51E929D2E4B800EEF1E2 /* RecentAccountCredits.swift */,
+				913B1BDB29AF1F4A002C5563 /* TransactionList.swift */,
+				9178248529AC955500CA7E87 /* TransactionListViewModel.swift */,
+				9178248729AC9AA600CA7E87 /* RecentTransactionList.swift */,
+				9178247C29AC8DD800CA7E87 /* TransactionModel.swift */,
+				9178247A29AC71B500CA7E87 /* Extensions.swift */,
 				9178244F29AC703800CA7E87 /* Assets.xcassets */,
 				9178245429AC703800CA7E87 /* Persistence.swift */,
 				9178245629AC703800CA7E87 /* Fundy_2_0.xcdatamodeld */,
 				9178245129AC703800CA7E87 /* Preview Content */,
+				91F4111D29D2A70E003FCA5B /* LoginScreen.swift */,
+				91F4111F29D2AE72003FCA5B /* Launch Screen.storyboard */,
 			);
 			path = "Fundy 2.0";
 			sourceTree = "<group>";
@@ -112,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				9178245229AC703800CA7E87 /* Preview Assets.xcassets */,
+				9178247E29AC8F3500CA7E87 /* PreviewData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -133,6 +191,27 @@
 			path = "Fundy 2.0UITests";
 			sourceTree = "<group>";
 		};
+		91E31B4F29D3E4720049C54D /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		91F4110C29D2906A003FCA5B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				91F4111329D29D27003FCA5B /* OverviewView.swift */,
+				9178248029AC901F00CA7E87 /* TransactionRow.swift */,
+				91F4110D29D290BB003FCA5B /* GoalsView.swift */,
+				913328AA29ED33FA00CBA0E0 /* GoalsViewViewModel.swift */,
+				910B51EB29D2F56C00EEF1E2 /* WhatsNewView.swift */,
+				91F4110F29D290C7003FCA5B /* NotificationsView.swift */,
+				91F4111129D290D0003FCA5B /* AdviceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,6 +228,14 @@
 			dependencies = (
 			);
 			name = "Fundy 2.0";
+			packageProductDependencies = (
+				914BFA6A29ECDC7100703A8E /* SwiftUIFontIcon */,
+				914BFA6D29ECDC7B00703A8E /* Collections */,
+				914BFA6F29ECDC7B00703A8E /* DequeModule */,
+				914BFA7129ECDC7B00703A8E /* OrderedCollections */,
+				914BFA7429ECDC8300703A8E /* SwiftUICharts */,
+				914BFA7729ECDC8A00703A8E /* SwiftPieChart */,
+			);
 			productName = "Fundy 2.0";
 			productReference = 9178244829AC703600CA7E87 /* Fundy 2.0.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +308,12 @@
 				Base,
 			);
 			mainGroup = 9178243F29AC703600CA7E87;
+			packageReferences = (
+				914BFA6929ECDC7100703A8E /* XCRemoteSwiftPackageReference "SwiftUIFontIcon" */,
+				914BFA6C29ECDC7B00703A8E /* XCRemoteSwiftPackageReference "swift-collections" */,
+				914BFA7329ECDC8300703A8E /* XCRemoteSwiftPackageReference "ChartView" */,
+				914BFA7629ECDC8A00703A8E /* XCRemoteSwiftPackageReference "SwiftPieChart" */,
+			);
 			productRefGroup = 9178244929AC703600CA7E87 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91F4112029D2AE72003FCA5B /* Launch Screen.storyboard in Resources */,
 				9178245329AC703800CA7E87 /* Preview Assets.xcassets in Resources */,
 				9178245029AC703800CA7E87 /* Assets.xcassets in Resources */,
 			);
@@ -263,10 +357,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913328AB29ED33FA00CBA0E0 /* GoalsViewViewModel.swift in Sources */,
+				9178247D29AC8DD800CA7E87 /* TransactionModel.swift in Sources */,
+				9178247B29AC71B500CA7E87 /* Extensions.swift in Sources */,
 				9178245829AC703800CA7E87 /* Fundy_2_0.xcdatamodeld in Sources */,
+				91F4110E29D290BB003FCA5B /* GoalsView.swift in Sources */,
+				910B51EF29D2F7DC00EEF1E2 /* What's New.xcdatamodeld in Sources */,
 				9178245529AC703800CA7E87 /* Persistence.swift in Sources */,
+				910B51EC29D2F56C00EEF1E2 /* WhatsNewView.swift in Sources */,
+				913B1BDC29AF1F4A002C5563 /* TransactionList.swift in Sources */,
+				910B51EA29D2E4B800EEF1E2 /* RecentAccountCredits.swift in Sources */,
+				91F4111E29D2A70E003FCA5B /* LoginScreen.swift in Sources */,
+				91F4111229D290D0003FCA5B /* AdviceView.swift in Sources */,
+				9178248629AC955500CA7E87 /* TransactionListViewModel.swift in Sources */,
+				9178247F29AC8F3500CA7E87 /* PreviewData.swift in Sources */,
+				9178248129AC901F00CA7E87 /* TransactionRow.swift in Sources */,
 				9178244E29AC703600CA7E87 /* ContentView.swift in Sources */,
+				91F4111029D290C7003FCA5B /* NotificationsView.swift in Sources */,
 				9178244C29AC703600CA7E87 /* Fundy_2_0App.swift in Sources */,
+				91F4111429D29D27003FCA5B /* OverviewView.swift in Sources */,
+				9178248829AC9AA600CA7E87 /* RecentTransactionList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -407,7 +517,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -422,6 +532,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Fundy 2.0/Preview Content\"";
@@ -431,8 +542,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,6 +563,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Fundy 2.0/Preview Content\"";
@@ -460,8 +573,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -592,7 +706,85 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		914BFA6929ECDC7100703A8E /* XCRemoteSwiftPackageReference "SwiftUIFontIcon" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huybuidac/SwiftUIFontIcon";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		914BFA6C29ECDC7B00703A8E /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		914BFA7329ECDC8300703A8E /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		914BFA7629ECDC8A00703A8E /* XCRemoteSwiftPackageReference "SwiftPieChart" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ilamanov/SwiftPieChart";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		914BFA6A29ECDC7100703A8E /* SwiftUIFontIcon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 914BFA6929ECDC7100703A8E /* XCRemoteSwiftPackageReference "SwiftUIFontIcon" */;
+			productName = SwiftUIFontIcon;
+		};
+		914BFA6D29ECDC7B00703A8E /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 914BFA6C29ECDC7B00703A8E /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		914BFA6F29ECDC7B00703A8E /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 914BFA6C29ECDC7B00703A8E /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		914BFA7129ECDC7B00703A8E /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 914BFA6C29ECDC7B00703A8E /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+		914BFA7429ECDC8300703A8E /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 914BFA7329ECDC8300703A8E /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+		914BFA7729ECDC8A00703A8E /* SwiftPieChart */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 914BFA7629ECDC8A00703A8E /* XCRemoteSwiftPackageReference "SwiftPieChart" */;
+			productName = SwiftPieChart;
+		};
+/* End XCSwiftPackageProductDependency section */
+
 /* Begin XCVersionGroup section */
+		910B51ED29D2F7DC00EEF1E2 /* What's New.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				910B51EE29D2F7DC00EEF1E2 /* What's New.xcdatamodel */,
+			);
+			currentVersion = 910B51EE29D2F7DC00EEF1E2 /* What's New.xcdatamodel */;
+			path = "What's New.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		9178245629AC703800CA7E87 /* Fundy_2_0.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

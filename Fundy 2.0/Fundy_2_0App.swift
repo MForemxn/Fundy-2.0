@@ -10,11 +10,12 @@ import SwiftUI
 @main
 struct Fundy_2_0App: App {
     let persistenceController = PersistenceController.shared
-
+    @StateObject var transactionsListVM = TransactionListViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(transactionsListVM)
         }
     }
 }
