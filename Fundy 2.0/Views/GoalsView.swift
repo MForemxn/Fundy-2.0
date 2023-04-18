@@ -16,18 +16,18 @@ struct GoalsView: View {
         ScrollView{
             HStack {
                 VStack {
-                    var _ : [Float] = transactionListVM.determineAllCategoryExpenseTotals()
-                    PieChartView(
-                        values: [1,2,3],
-                        names: ["test1", "test2", "test3"],
+                        PieChartView(
+                        values: transactionListVM.findThe3BiggestCategoriesSums(),
+                        names: transactionListVM.findThe3BiggestCategoriesLabels(),
                         formatter: {value in String(format: "$%.2f", value)},
-                        backgroundColor: Color(.systemBackground),
+                        backgroundColor: Color.background,
                         widthFraction: 0.95)
                     
                 }
                 .padding()
             }
         }
+        .background(Color.background)
     }
 }
 

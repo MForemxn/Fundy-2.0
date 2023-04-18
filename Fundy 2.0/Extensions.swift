@@ -45,3 +45,4 @@ extension Double {
         return (self * 100).rounded() / 100
     }
 }
+

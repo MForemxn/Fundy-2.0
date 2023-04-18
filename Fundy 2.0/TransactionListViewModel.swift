@@ -25,7 +25,8 @@ final class TransactionListViewModel: ObservableObject {
     
     func getTransactions() {
         //guard let url = URL(string: "https://tinyurl.com/36218665DummyData") else {
-        guard let url = URL(string: "https://api.npoint.io/fd52e675ab3a661c616d") else {
+        //guard let url = URL(string: "https://api.npoint.io/cd2f1733b00299056bf3") else {
+        guard let url = URL(string: "https://api.npoint.io/af9add659ccd98130350") else {
             print("Invalid URL")
             return
         }
@@ -82,7 +83,7 @@ final class TransactionListViewModel: ObservableObject {
             sum += dailyTotal
             sum = sum.roundedTo2Digits()
             cumulativeSum.append((date.formatted(), sum))
-            print(date.formatted(), "Daily total:", dailyTotal, "sum:", sum)
+            //print(date.formatted(), "Daily total:", dailyTotal, "sum:", sum)
         }
         
         return cumulativeSum
@@ -108,28 +109,62 @@ final class TransactionListViewModel: ObservableObject {
     
     
     
-    func calculateSumOfExpensesInGivenCategory(categoryName: String) -> Float {
-        var sumOfTransactionsInCategory: Float = 0
+    func calculateSumOfExpensesInGivenCategory(categoryName: String) -> Double {
+        var sumOfTransactionsInCategory: Double = 0
         for transaction in transactions {
-            if transaction.category == categoryName {
-                if transaction.isExpense {
-                    sumOfTransactionsInCategory += Float(transaction.amount)
-                }
-
+            if transaction.category == categoryName && transaction.isExpense {
+                sumOfTransactionsInCategory += Double(transaction.amount)
             }
+            
         }
         return sumOfTransactionsInCategory
     }
     
-    func determineAllCategoryExpenseTotals() -> [Float] {
-    var allCategoryTotalsInOrder: [Float] = []
+    func determineAllCategoryExpenseTotals() -> [Double] {
+        var allCategoryTotalsInOrder: [Double] = []
         for Category in TransactionListViewModel.allTransactionNames {
             allCategoryTotalsInOrder.append(calculateSumOfExpensesInGivenCategory(categoryName: Category))
         }
-        print(allCategoryTotalsInOrder)
+        //print(allCategoryTotalsInOrder)
         return allCategoryTotalsInOrder
     }
     
+    func combineCategoriesWithSums() -> [(categoryName: String, sumTotal: Double)] {
+        let categories: [String] = allTransactionCategoryNames
+        let values: [Double] = determineAllCategoryExpenseTotals()
+        var combinedArrayofTransactionSumsAndCategories: [(categoryName: String, sumTotal: Double)] = []
+        print(combinedArrayofTransactionSumsAndCategories)
+        
+        for i in 0...allTransactionCategoryNames.count - 1 {
+            combinedArrayofTransactionSumsAndCategories.append((categoryName: categories[i], sumTotal: values[i]))
+        }
+        
+        return combinedArrayofTransactionSumsAndCategories
+    }
+    
+    func findThe3BiggestCategoriesSums() -> [Double] {
+        var combinedArray: [(categoryName: String, sumTotal: Double)] = combineCategoriesWithSums()
+        
+        let sortedCombinedArray = combinedArray.sorted(by: { $0.sumTotal > $1.sumTotal})
+        
+        var sum: Double = 0
+        
+        for tuple in sortedCombinedArray {
+            sum += tuple.sumTotal
+        }
+        
+        let restSum = sum - sortedCombinedArray[0].sumTotal - sortedCombinedArray[1].sumTotal
+        
+        // Return the two largest values and the sum of the remaining values as an array
+        return [sortedCombinedArray[0].sumTotal, sortedCombinedArray[1].sumTotal, restSum]
+    }
+    
+    func findThe3BiggestCategoriesLabels() -> [String] {
+        var combinedArray: [(categoryName: String, sumTotal: Double)] = combineCategoriesWithSums()
+        
+        let sortedCombinedArray = combinedArray.sorted(by: { $0.sumTotal > $1.sumTotal})
+        
+        // Return the two largest values and the sum of the remaining values as an array
+        return [sortedCombinedArray[0].categoryName, sortedCombinedArray[1].categoryName, "Other"]
+    }
 }
-
-
