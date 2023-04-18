@@ -24,7 +24,8 @@ final class TransactionListViewModel: ObservableObject {
     }
     
     func getTransactions() {
-        guard let url = URL(string: "https://tinyurl.com/36218665DummyData") else {
+        //guard let url = URL(string: "https://tinyurl.com/36218665DummyData") else {
+        guard let url = URL(string: "https://api.npoint.io/fd52e675ab3a661c616d") else {
             print("Invalid URL")
             return
         }
@@ -85,7 +86,7 @@ final class TransactionListViewModel: ObservableObject {
         }
         
         return cumulativeSum
-        }
+    }
     
     func determineDailyTotal() -> [Double] {
         var output: [Double] = []
@@ -95,5 +96,40 @@ final class TransactionListViewModel: ObservableObject {
         return output
     }
     
+    static let allTransactionNames: [String] = ["Auto & Transport", "Bills and Utilities", "Entertainment", "Fees & Charges", "Food and Dining", "Home", "Income", "Shopping", "Transfer", "Public Transportation", "Taxi", "Mobile Phone", "Movies and DVD's", "Bank Fees", "Finance Charge", "Groceries", "Restaurants", "Rent", "Home Supplies", "Pay Cheque", "Software", "Credit Card Payment"]
+    
+    func calculateSumOfAllTransactions() -> Double {
+        var total: Double = 0
+        for transaction in transactions {
+            total += transaction.amount
+        }
+        return total
     }
+    
+    
+    
+    func calculateSumOfExpensesInGivenCategory(categoryName: String) -> Float {
+        var sumOfTransactionsInCategory: Float = 0
+        for transaction in transactions {
+            if transaction.category == categoryName {
+                if transaction.isExpense {
+                    sumOfTransactionsInCategory += Float(transaction.amount)
+                }
+
+            }
+        }
+        return sumOfTransactionsInCategory
+    }
+    
+    func determineAllCategoryExpenseTotals() -> [Float] {
+    var allCategoryTotalsInOrder: [Float] = []
+        for Category in TransactionListViewModel.allTransactionNames {
+            allCategoryTotalsInOrder.append(calculateSumOfExpensesInGivenCategory(categoryName: Category))
+        }
+        print(allCategoryTotalsInOrder)
+        return allCategoryTotalsInOrder
+    }
+    
+}
+
 

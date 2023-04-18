@@ -24,7 +24,7 @@ struct Transaction: Identifiable, Decodable, Hashable {
     var isEdited: Bool
     
     var icon: FontAwesomeCode {
-        if let category = Category.all.first(where: { $0.id == categoryId }) {
+        if let category = Category.allCategories.first(where: { $0.id == categoryId }) {
             return category.icon
         }
             return .question
@@ -80,6 +80,7 @@ extension Category {
     static let paycheque = Category(id: 701, name: "Pay Cheque", icon: .dollar_sign, mainCategoryId: 7)
     static let software = Category(id: 801, name: "Software", icon: .icons, mainCategoryId: 8)
     static let creditCardPayment = Category(id: 901, name: "Credit Card Payment", icon: .exchange_alt, mainCategoryId: 9)
+    
 }
 
 extension Category {
@@ -109,5 +110,13 @@ extension Category {
             .software,
             .creditCardPayment
     ]
-    static let all: [Category] = categories + subCategories
+    static let allCategories: [Category] = categories + subCategories
 }
+
+extension Category {
+    static let allTransactionNames: [String] = ["Auto & Transport", "Bills and Utilities", "Entertainment", "Fees & Charges", "Food and Dining", "Home", "Income", "Shopping", "Transfer", "Public Transportation", "Taxi", "Mobile Phone", "Movies and DVD's", "Bank Fees", "Finance Charge", "Groceries", "Restaurants", "Rent", "Home Supplies", "Pay Cheque", "Software", "Credit Card Payment"]
+
+}
+
+
+

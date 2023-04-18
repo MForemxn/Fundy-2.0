@@ -11,21 +11,22 @@ import SwiftPieChart
 
 struct GoalsView: View {
     @EnvironmentObject var transactionListVM: TransactionListViewModel
+    @EnvironmentObject var transactionModel: TransactionListViewModel
     var body: some View {
         ScrollView{
             HStack {
                 VStack {
+                    var _ : [Float] = transactionListVM.determineAllCategoryExpenseTotals()
                     PieChartView(
-                        values: [1300, 500, 300],
-                        names: ["Rent", "Transport", "Education"],
+                        values: [1,2,3],
+                        names: ["test1", "test2", "test3"],
                         formatter: {value in String(format: "$%.2f", value)},
                         backgroundColor: Color(.systemBackground),
                         widthFraction: 0.95)
-
+                    
                 }
                 .padding()
             }
-            .padding()
         }
     }
 }
