@@ -12,25 +12,17 @@ import Collections
 
 struct OverviewView: View {
     @EnvironmentObject var transactionListVM: TransactionListViewModel
-    // var demoData: [Double] = [8, 2, 4, 6, 12, 9, 2]
     var body: some View {
         NavigationView{
             ScrollView{
                 VStack(alignment: .leading, spacing: 24) {
-                    // MARK: Title
                     Text("Overview")
                         .font(.title)
                         .bold()
-                    
-                    // MARK: Chart
                     let data = transactionListVM.accumulateTransactions()
-                    
-                    // MARK: Chart
                     if !data.isEmpty {
-                        let totalExpenses = data.last?.1 ?? 0
-                        LineChartView(data: transactionListVM.determineDailyTotal(), title: "Daily Income", form: ChartForm.large) // legend is optional
+                        LineChartView(data: transactionListVM.determineDailyTotal(), title: "Daily Income", form: ChartForm.large)
                     }
-                    // MARK: Recent Transactions List
                     RecentTransactionList()
                 }
                 .padding()
@@ -39,7 +31,6 @@ struct OverviewView: View {
             .background(Color.background)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                // MARK: Notification Icon
                 ToolbarItem {
                     NavigationLink {
                         NotificationsView()

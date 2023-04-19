@@ -241,9 +241,9 @@
 				9121D7DD29EF955600BE4DF4 /* Homepage.swift */,
 				91F4111329D29D27003FCA5B /* OverviewView.swift */,
 				91F4110D29D290BB003FCA5B /* GoalsView.swift */,
+				91F4111129D290D0003FCA5B /* AdviceView.swift */,
 				9121D7E329EFCB1E00BE4DF4 /* Settings.swift */,
 				91F4110F29D290C7003FCA5B /* NotificationsView.swift */,
-				91F4111129D290D0003FCA5B /* AdviceView.swift */,
 			);
 			path = "Navigation Bar Pages";
 			sourceTree = "<group>";

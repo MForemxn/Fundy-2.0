@@ -18,10 +18,9 @@ struct GoalsView: View {
                 HStack {
                     VStack(alignment: .leading, spacing: 24) {
                         Text("Goals")
-                            .font(.title2)
+                            .font(.title)
                             .bold()
                         PieChartView(values: transactionListVM.findThe3BiggestCategoriesSums(), names: transactionListVM.findThe3BiggestCategoriesLabels(), formatter: {value in String(format: "$%.2f", value)}, backgroundColor: Color.background, widthFraction: 0.95)
-                        
                     }
                     .padding()
                     .frame(maxWidth: .infinity)
@@ -30,7 +29,6 @@ struct GoalsView: View {
             .background(Color.background)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                // MARK: Notification Icon
                 ToolbarItem {
                     NavigationLink {
                         NotificationsView()
