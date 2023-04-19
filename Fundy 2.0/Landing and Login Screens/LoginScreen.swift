@@ -50,11 +50,10 @@ struct LoginScreen: View {
                 
                 if hasAccount {
                     Button(action: {
-                        // Perform login action here
                         isAuthenticated = true
                     }) {
                         NavigationLink {
-                            Homepage()
+                            ContentView()
                         } label: {
                             HStack {
                                 Spacer()
@@ -72,7 +71,7 @@ struct LoginScreen: View {
                         isAuthenticated = true
                     }) {
                         NavigationLink() {
-                            Homepage()
+                            ContentView()
                         } label: {
                             HStack {
                                 Spacer()
