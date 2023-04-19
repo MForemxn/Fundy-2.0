@@ -28,6 +28,7 @@ struct LoginScreen: View {
                         Text("")
                         
                     }
+                    .padding(.vertical, 40)
                     .pickerStyle(SegmentedPickerStyle())
                 }
                 
@@ -39,6 +40,7 @@ struct LoginScreen: View {
                             .font(.system(size: 80, weight: .bold, design: .default))
                             .padding()
                     }
+                    .padding(.vertical, 100)
                 }
                 Group{
                     TextField ("Email", text: $email)
@@ -53,7 +55,8 @@ struct LoginScreen: View {
                         isAuthenticated = true
                     }) {
                         NavigationLink {
-                            ContentView()
+                            Homepage()
+                            .navigationBarBackButtonHidden(true)
                         } label: {
                             HStack {
                                 Spacer()
@@ -63,6 +66,7 @@ struct LoginScreen: View {
                                 Spacer()
                             }.background(Color.blue)
                         }
+                        .padding(.vertical, 100)
                         
                     }
                 } else {
@@ -71,7 +75,8 @@ struct LoginScreen: View {
                         isAuthenticated = true
                     }) {
                         NavigationLink() {
-                            ContentView()
+                            Homepage()
+                            .navigationBarBackButtonHidden(true)
                         } label: {
                             HStack {
                                 Spacer()
@@ -81,6 +86,7 @@ struct LoginScreen: View {
                                 Spacer()
                             }.background(Color.blue)
                         }
+                        .padding(.vertical, 100)
                     }
                 }
             }

@@ -9,27 +9,20 @@ import SwiftUI
 import CoreData
 
 struct Homepage: View {
+    @State var showWhatsNewSheet = false
+    
     var body: some View {
+        NavigationView{
             TabView {
-                WhatsNewView()
+                GoalsView()
                     .tabItem() {
-                        Image(systemName: "person.crop.circle.dashed")
-                        Text("What's New")
-                    }
-                LoginScreen()
-                    .tabItem() {
-                        Image(systemName: "apple.logo")
-                        Text("Login Page")
+                        Image(systemName: "target")
+                        Text("Goals")
                     }
                 OverviewView()
                     .tabItem() {
                         Image(systemName: "dollarsign")
                         Text("Overview")
-                    }
-                GoalsView()
-                    .tabItem() {
-                        Image(systemName: "target")
-                        Text("Goals")
                     }
                 AdviceView()
                     .tabItem() {
@@ -37,11 +30,19 @@ struct Homepage: View {
                         Text("Advice")
                     }
             }
+            .onAppear {
+                showWhatsNewSheet = true
+            }
+            .sheet(isPresented: $showWhatsNewSheet) {
+                WhatsNewView()
+            }
         }
     }
+}
 
 struct Homepage_Previews: PreviewProvider {
     static var previews: some View {
         Homepage()
     }
 }
+

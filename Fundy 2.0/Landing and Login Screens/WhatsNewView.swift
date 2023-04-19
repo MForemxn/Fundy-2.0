@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct WhatsNewView: View {
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         ScrollView {
             VStack {
@@ -103,25 +104,28 @@ struct WhatsNewView: View {
                 .foregroundColor(.blue)
                 .font(.subheadline)
                 Spacer()
-                Text("Continue")
-                    .font(.callout.weight(.semibold))
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .clipped()
-                    .foregroundColor(.white)
-                    .background(.blue)
-                    .mask { RoundedRectangle(cornerRadius: 16, style: .continuous) }
-                    .padding(.bottom, 60)
-            }
-            .frame(maxWidth: .infinity)
-            .clipped()
-            .padding(.top, 53)
-            .padding(.bottom, 0)
-            .padding(.horizontal, 29)
-            .overlay(alignment: .top) {
-                Group {
+                Button("Continue") {
+                    dismiss()
                     
                 }
+                .font(.callout.weight(.semibold))
+                .padding()
+                .frame(maxWidth: .infinity)
+                .clipped()
+                .foregroundColor(.white)
+                .background(.blue)
+                .mask { RoundedRectangle(cornerRadius: 16, style: .continuous) }
+                .padding(.bottom, 60)
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .clipped()
+        .padding(.top, 53)
+        .padding(.bottom, 0)
+        .padding(.horizontal, 29)
+        .overlay(alignment: .top) {
+            Group {
+                
             }
         }
     }

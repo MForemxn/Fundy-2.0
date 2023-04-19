@@ -19,37 +19,37 @@ struct OverviewView: View {
                 VStack(alignment: .leading, spacing: 24) {
                     // MARK: Title
                     Text("Overview")
-                        .font(.title2)
+                        .font(.title)
                         .bold()
                     
                     // MARK: Chart
                     let data = transactionListVM.accumulateTransactions()
-    
+                    
                     // MARK: Chart
                     if !data.isEmpty {
                         let totalExpenses = data.last?.1 ?? 0
                         LineChartView(data: transactionListVM.determineDailyTotal(), title: "Daily Income", form: ChartForm.large) // legend is optional
                     }
-                // MARK: Recent Transactions List
-                RecentTransactionList()
+                    // MARK: Recent Transactions List
+                    RecentTransactionList()
+                }
+                .padding()
+                .frame(maxWidth: .infinity)
             }
-            .padding()
-            .frame(maxWidth: .infinity)
-        }
-        .background(Color.background)
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            // MARK: Notification Icon
-            ToolbarItem {
-                NavigationLink {
-                    NotificationsView()
-                } label: {
-                    Image(systemName: "bell.badge")
-                        .symbolRenderingMode(.palette)
-                        .foregroundStyle(Color.icon, .primary)
+            .background(Color.background)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                // MARK: Notification Icon
+                ToolbarItem {
+                    NavigationLink {
+                        NotificationsView()
+                    } label: {
+                        Image(systemName: "bell.badge")
+                            .symbolRenderingMode(.palette)
+                            .foregroundStyle(Color.icon, .primary)
+                    }
                 }
             }
-        }
         }
         .navigationViewStyle(.stack)
         .accentColor(.primary)
