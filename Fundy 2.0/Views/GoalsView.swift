@@ -13,22 +13,39 @@ struct GoalsView: View {
     @EnvironmentObject var transactionListVM: TransactionListViewModel
     @EnvironmentObject var transactionModel: TransactionListViewModel
     var body: some View {
-        ScrollView{
-            HStack {
-                VStack {
-                        PieChartView(
-                        values: transactionListVM.findThe3BiggestCategoriesSums(),
-                        names: transactionListVM.findThe3BiggestCategoriesLabels(),
-                        formatter: {value in String(format: "$%.2f", value)},
-                        backgroundColor: Color.background,
-                        widthFraction: 0.95)
-                    
+        NavigationView{
+            ScrollView{
+                HStack {
+                    VStack(alignment: .leading, spacing: 24) {
+                        Text("Goals")
+                            .font(.title2)
+                            .bold()
+                        PieChartView(values: transactionListVM.findThe3BiggestCategoriesSums(), names: transactionListVM.findThe3BiggestCategoriesLabels(), formatter: {value in String(format: "$%.2f", value)}, backgroundColor: Color.background, widthFraction: 0.95)
+                        
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity)
                 }
-                .padding()
+            }
+            .background(Color.background)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                // MARK: Notification Icon
+                ToolbarItem {
+                    NavigationLink {
+                        NotificationsView()
+                    } label: {
+                        Image(systemName: "bell.badge")
+                            .symbolRenderingMode(.palette)
+                            .foregroundStyle(Color.icon, .primary)
+                    }
+                }
             }
         }
-        .background(Color.background)
+        .navigationViewStyle(.stack)
+        .accentColor(.primary)
     }
+    
 }
 
 struct GoalsView_Previews: PreviewProvider {

@@ -10,6 +10,8 @@
 		910B51EA29D2E4B800EEF1E2 /* RecentAccountCredits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B51E929D2E4B800EEF1E2 /* RecentAccountCredits.swift */; };
 		910B51EC29D2F56C00EEF1E2 /* WhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B51EB29D2F56C00EEF1E2 /* WhatsNewView.swift */; };
 		910B51EF29D2F7DC00EEF1E2 /* What's New.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 910B51ED29D2F7DC00EEF1E2 /* What's New.xcdatamodeld */; };
+		9121D7DC29EF946500BE4DF4 /* ThisPageDoesNotExist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9121D7DB29EF946500BE4DF4 /* ThisPageDoesNotExist.swift */; };
+		9121D7DE29EF955600BE4DF4 /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9121D7DD29EF955600BE4DF4 /* Homepage.swift */; };
 		913328AB29ED33FA00CBA0E0 /* GoalsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913328AA29ED33FA00CBA0E0 /* GoalsViewViewModel.swift */; };
 		913B1BDC29AF1F4A002C5563 /* TransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B1BDB29AF1F4A002C5563 /* TransactionList.swift */; };
 		914BFA6B29ECDC7100703A8E /* SwiftUIFontIcon in Frameworks */ = {isa = PBXBuildFile; productRef = 914BFA6A29ECDC7100703A8E /* SwiftUIFontIcon */; };
@@ -62,6 +64,8 @@
 		910B51E929D2E4B800EEF1E2 /* RecentAccountCredits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentAccountCredits.swift; sourceTree = "<group>"; };
 		910B51EB29D2F56C00EEF1E2 /* WhatsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewView.swift; sourceTree = "<group>"; };
 		910B51EE29D2F7DC00EEF1E2 /* What's New.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "What's New.xcdatamodel"; sourceTree = "<group>"; };
+		9121D7DB29EF946500BE4DF4 /* ThisPageDoesNotExist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThisPageDoesNotExist.swift; sourceTree = "<group>"; };
+		9121D7DD29EF955600BE4DF4 /* Homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
 		913328AA29ED33FA00CBA0E0 /* GoalsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewViewModel.swift; sourceTree = "<group>"; };
 		913B1BDB29AF1F4A002C5563 /* TransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionList.swift; sourceTree = "<group>"; };
 		9178244829AC703600CA7E87 /* Fundy 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fundy 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				9178244D29AC703600CA7E87 /* ContentView.swift */,
+				91F4111D29D2A70E003FCA5B /* LoginScreen.swift */,
 				91F4110C29D2906A003FCA5B /* Views */,
 				9178244B29AC703600CA7E87 /* Fundy_2_0App.swift */,
 				910B51E929D2E4B800EEF1E2 /* RecentAccountCredits.swift */,
@@ -154,13 +159,13 @@
 				9178248529AC955500CA7E87 /* TransactionListViewModel.swift */,
 				9178248729AC9AA600CA7E87 /* RecentTransactionList.swift */,
 				9178247C29AC8DD800CA7E87 /* TransactionModel.swift */,
+				9121D7DB29EF946500BE4DF4 /* ThisPageDoesNotExist.swift */,
 				913328AA29ED33FA00CBA0E0 /* GoalsViewViewModel.swift */,
 				9178247A29AC71B500CA7E87 /* Extensions.swift */,
 				9178244F29AC703800CA7E87 /* Assets.xcassets */,
 				9178245429AC703800CA7E87 /* Persistence.swift */,
 				9178245629AC703800CA7E87 /* Fundy_2_0.xcdatamodeld */,
 				9178245129AC703800CA7E87 /* Preview Content */,
-				91F4111D29D2A70E003FCA5B /* LoginScreen.swift */,
 				91F4111F29D2AE72003FCA5B /* Launch Screen.storyboard */,
 			);
 			path = "Fundy 2.0";
@@ -202,6 +207,7 @@
 		91F4110C29D2906A003FCA5B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9121D7DD29EF955600BE4DF4 /* Homepage.swift */,
 				91F4111329D29D27003FCA5B /* OverviewView.swift */,
 				9178248029AC901F00CA7E87 /* TransactionRow.swift */,
 				91F4110D29D290BB003FCA5B /* GoalsView.swift */,
@@ -364,6 +370,7 @@
 				91F4110E29D290BB003FCA5B /* GoalsView.swift in Sources */,
 				910B51EF29D2F7DC00EEF1E2 /* What's New.xcdatamodeld in Sources */,
 				9178245529AC703800CA7E87 /* Persistence.swift in Sources */,
+				9121D7DE29EF955600BE4DF4 /* Homepage.swift in Sources */,
 				910B51EC29D2F56C00EEF1E2 /* WhatsNewView.swift in Sources */,
 				913B1BDC29AF1F4A002C5563 /* TransactionList.swift in Sources */,
 				910B51EA29D2E4B800EEF1E2 /* RecentAccountCredits.swift in Sources */,
@@ -373,6 +380,7 @@
 				9178247F29AC8F3500CA7E87 /* PreviewData.swift in Sources */,
 				9178248129AC901F00CA7E87 /* TransactionRow.swift in Sources */,
 				9178244E29AC703600CA7E87 /* ContentView.swift in Sources */,
+				9121D7DC29EF946500BE4DF4 /* ThisPageDoesNotExist.swift in Sources */,
 				91F4111029D290C7003FCA5B /* NotificationsView.swift in Sources */,
 				9178244C29AC703600CA7E87 /* Fundy_2_0App.swift in Sources */,
 				91F4111429D29D27003FCA5B /* OverviewView.swift in Sources */,
