@@ -17,19 +17,22 @@ struct GoalsView: View {
             ScrollView{
                 HStack {
                     VStack(alignment: .leading, spacing: 24) {
-                        Text("Goals")
-                            .font(.title)
-                            .bold()
-                        PieChartView(values: transactionListVM.findThe3BiggestCategoriesSums(), names: transactionListVM.findThe3BiggestCategoriesLabels(), formatter: {value in String(format: "$%.2f", value)}, backgroundColor: Color.background, widthFraction: 0.95)
+                        ZStack {
+                            PieChartView(values: transactionListVM.findThe3BiggestCategoriesSums(), names: transactionListVM.findThe3BiggestCategoriesLabels(), formatter: {value in String(format: "$%.2f", value)}, widthFraction: 0.85)
+                                .backgroundColor(Color.background)
+                                //.text(Color.primary)
+                        }
+                        .background(Color.background)
                     }
-                    .padding()
                     .frame(maxWidth: .infinity)
+                    .background(Color.background)
                 }
+                .background(Color.background)
             }
             .background(Color.background)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem {
+                  ToolbarItem {
                     NavigationLink {
                         NotificationsView()
                     } label: {
@@ -42,12 +45,7 @@ struct GoalsView: View {
         }
         .navigationViewStyle(.stack)
         .accentColor(.primary)
-    }
-    
-}
-
-struct GoalsView_Previews: PreviewProvider {
-    static var previews: some View {
-        GoalsView()
+        .navigationTitle("Goals")
+        .background(Color.background)
     }
 }

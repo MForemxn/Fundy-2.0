@@ -34,6 +34,7 @@ struct SettingsPage: View {
             }
             .navigationTitle("Settings")
         }
+        .background(Color.background)
     }
 }
 
@@ -84,6 +85,7 @@ struct SettingDetailView: View {
                 }
                 .pickerStyle(MenuPickerStyle())
                 .padding(.horizontal)
+                .background(Color.background)
             } else if setting.name == "Touch ID" {
                 Toggle("Enable Touch ID", isOn: $isToggled)
                     .padding(.horizontal)
@@ -91,5 +93,6 @@ struct SettingDetailView: View {
             Spacer()
         }
         .navigationTitle(setting.name)
+        .background(Color.background)
     }
 }
