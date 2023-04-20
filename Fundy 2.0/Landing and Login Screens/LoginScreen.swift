@@ -45,7 +45,9 @@ struct LoginScreen: View {
                 Group{
                     TextField ("Email", text: $email)
                         .keyboardType(.emailAddress)
+                        .background(Color.gray)
                     SecureField("Password", text: $password)
+                        .background(Color.gray)
                 }.padding()
                     .textInputAutocapitalization(TextInputAutocapitalization.never)
                 

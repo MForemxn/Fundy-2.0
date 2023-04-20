@@ -34,6 +34,11 @@ struct Homepage: View {
                         Image(systemName: "gear")
                         Text("Settings")
                     }
+                AnalogueClock()
+                    .tabItem() {
+                        Image(systemName: "clock.fill")
+                        Text("Clock")
+                    }
             }
             .onAppear {
                 if !whatsNewSheetHasBeenShown {

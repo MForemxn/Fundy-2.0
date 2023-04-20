@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftPieChart
+import SwiftUICharts
 
 
 struct GoalsView: View {
@@ -15,24 +16,17 @@ struct GoalsView: View {
     var body: some View {
         NavigationView{
             ScrollView{
-                HStack {
+                HStack{
                     VStack(alignment: .leading, spacing: 24) {
-                        ZStack {
-                            PieChartView(values: transactionListVM.findThe3BiggestCategoriesSums(), names: transactionListVM.findThe3BiggestCategoriesLabels(), formatter: {value in String(format: "$%.2f", value)}, widthFraction: 0.85)
-                                .backgroundColor(Color.background)
-                                //.text(Color.primary)
-                        }
-                        .background(Color.background)
+                        PieChartView(values: transactionListVM.findThe3BiggestCategoriesSums(), names: transactionListVM.findThe3BiggestCategoriesLabels(), formatter: {value in String(format: "$%.2f", value)}, colors: [.blue, .green, .orange], backgroundColor: .clear, widthFraction: 0.95, innerRadiusFraction: 0.75)
                     }
-                    .frame(maxWidth: .infinity)
-                    .background(Color.background)
                 }
-                .background(Color.background)
+                .padding()
             }
             .background(Color.background)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                  ToolbarItem {
+                ToolbarItem {
                     NavigationLink {
                         NotificationsView()
                     } label: {
@@ -43,9 +37,8 @@ struct GoalsView: View {
                 }
             }
         }
-        .navigationViewStyle(.stack)
         .accentColor(.primary)
         .navigationTitle("Goals")
-        .background(Color.background)
+        .navigationViewStyle(.stack)
     }
 }

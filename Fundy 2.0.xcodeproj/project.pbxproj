@@ -37,6 +37,7 @@
 		9178248129AC901F00CA7E87 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178248029AC901F00CA7E87 /* TransactionRow.swift */; };
 		9178248629AC955500CA7E87 /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178248529AC955500CA7E87 /* TransactionListViewModel.swift */; };
 		9178248829AC9AA600CA7E87 /* RecentTransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178248729AC9AA600CA7E87 /* RecentTransactionList.swift */; };
+		91D31E4929F1197800500F88 /* AnalogueClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D31E4829F1197800500F88 /* AnalogueClock.swift */; };
 		91F4110E29D290BB003FCA5B /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4110D29D290BB003FCA5B /* GoalsView.swift */; };
 		91F4111029D290C7003FCA5B /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4110F29D290C7003FCA5B /* NotificationsView.swift */; };
 		91F4111229D290D0003FCA5B /* AdviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4111129D290D0003FCA5B /* AdviceView.swift */; };
@@ -90,6 +91,7 @@
 		9178248029AC901F00CA7E87 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
 		9178248529AC955500CA7E87 /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
 		9178248729AC9AA600CA7E87 /* RecentTransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionList.swift; sourceTree = "<group>"; };
+		91D31E4829F1197800500F88 /* AnalogueClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogueClock.swift; sourceTree = "<group>"; };
 		91F4110D29D290BB003FCA5B /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
 		91F4110F29D290C7003FCA5B /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		91F4111129D290D0003FCA5B /* AdviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceView.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				9121D7DD29EF955600BE4DF4 /* Homepage.swift */,
 				91F4111329D29D27003FCA5B /* OverviewView.swift */,
 				91F4110D29D290BB003FCA5B /* GoalsView.swift */,
+				91D31E4829F1197800500F88 /* AnalogueClock.swift */,
 				91F4111129D290D0003FCA5B /* AdviceView.swift */,
 				9121D7E329EFCB1E00BE4DF4 /* Settings.swift */,
 				91F4110F29D290C7003FCA5B /* NotificationsView.swift */,
@@ -405,6 +408,7 @@
 				913B1BDC29AF1F4A002C5563 /* TransactionList.swift in Sources */,
 				910B51EA29D2E4B800EEF1E2 /* RecentAccountCredits.swift in Sources */,
 				91F4111E29D2A70E003FCA5B /* LoginScreen.swift in Sources */,
+				91D31E4929F1197800500F88 /* AnalogueClock.swift in Sources */,
 				91F4111229D290D0003FCA5B /* AdviceView.swift in Sources */,
 				9121D7E029EFCA2900BE4DF4 /* LandingScreen.swift in Sources */,
 				9178248629AC955500CA7E87 /* TransactionListViewModel.swift in Sources */,
