@@ -24,8 +24,6 @@ final class TransactionListViewModel: ObservableObject {
     }
     
     func getTransactions() {
-        //guard let url = URL(string: "https://tinyurl.com/36218665DummyData") else {
-        //guard let url = URL(string: "https://api.npoint.io/cd2f1733b00299056bf3") else {
         guard let url = URL(string: "https://api.npoint.io/af9add659ccd98130350") else {
             print("Invalid URL")
             return
@@ -83,7 +81,6 @@ final class TransactionListViewModel: ObservableObject {
             sum += dailyTotal
             sum = sum.roundedTo2Digits()
             cumulativeSum.append((date.formatted(), sum))
-            //print(date.formatted(), "Daily total:", dailyTotal, "sum:", sum)
         }
         
         return cumulativeSum
