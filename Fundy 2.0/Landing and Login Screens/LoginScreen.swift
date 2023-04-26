@@ -7,17 +7,29 @@
 
 import SwiftUI
 
+
+// Define a new view called LoginScreen.
 struct LoginScreen: View {
     
+    // Define some state variables.
     @State var hasAccount: Bool = false
     @State var email: String = ""
     @State var password: String = ""
     @State var isAuthenticated: Bool = false
+    @State var buttonClicked: Bool = false
     
     var body: some View {
+        
+        // Wrap the view in a navigation view.
         NavigationView {
+            
+            // Create a scroll view for the main content of the view.
             ScrollView {
+                
+                // Create a vertical stack to hold the various elements of the login screen.
                 VStack(spacing: 40) {
+                    
+                    // Create a segmented control to switch between the login and sign up screens.
                     Picker(selection: $hasAccount) {
                         Text("Login")
                             .tag(true)
@@ -32,6 +44,7 @@ struct LoginScreen: View {
                     .cornerRadius(8)
                     .padding(.horizontal, 20)
                     
+                    // If the user is logging in, show a button with their profile image.
                     if hasAccount {
                         Button {
                             
@@ -44,6 +57,7 @@ struct LoginScreen: View {
                         .padding(.vertical, 40)
                     }
                     
+                    // Create a text field for the user's email address and a secure field for their password.
                     Group {
                         TextField("Email", text: $email)
                             .keyboardType(.emailAddress)
@@ -61,15 +75,20 @@ struct LoginScreen: View {
                             .foregroundColor(.white)
                     }
                     
+                    // If the user is logging in, show a "login" button. If they're signing up, show a "sign up" button.
                     if hasAccount {
                         Button(action: {
-                            if email == "admin@icloud.com" && password == "password" {
-                                isAuthenticated = true
-                            }
+                            buttonClicked = true
                         }) {
                             NavigationLink {
-                                Homepage()
-                                    .navigationBarBackButtonHidden(true)
+                                if checkForAuthentication(email: email, password: password, hasAccount: hasAccount) == true {
+                                    Homepage()
+                                        .navigationBarBackButtonHidden(true)
+                                    var buttonClicked = false
+                                } else {
+                                    ThisPageDoesNotExist()
+                                    var buttonClicked = false
+                                }
                             } label: {
                                 HStack {
                                     Spacer()
@@ -87,13 +106,17 @@ struct LoginScreen: View {
                         }
                     } else {
                         Button(action: {
-                            if email.isValidEmail && password.isValidPassword {
-                                isAuthenticated = true
-                            }
+                            var buttonClicked = true
                         }) {
                             NavigationLink() {
-                                Homepage()
-                                    .navigationBarBackButtonHidden(true)
+                                if checkForAuthentication(email: email, password: password, hasAccount: hasAccount) {
+                                    Homepage()
+                                        .navigationBarBackButtonHidden(true)
+                                    var buttonClicked = false
+                                } else {
+                                    ThisPageDoesNotExist()
+                                    var buttonClicked = false
+                                }
                             } label: {
                                 HStack {
                                     Spacer()
@@ -116,22 +139,36 @@ struct LoginScreen: View {
             .background(Color.background.ignoresSafeArea())
         }
     }
-}
-
-struct LoginScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginScreen()
+    
+    func checkForAuthentication(email: String, password: String, hasAccount: Bool) -> Bool {
+        var isAuthenticated: Bool = false
+        if hasAccount {
+            if email == "cameron@fundy.com" && password == "password" {
+                isAuthenticated = true
+            }
+        } else {
+            if email.isValidEmail && password.isValidPassword {
+                isAuthenticated = true
+            }
+        }
+        return isAuthenticated
     }
 }
-
-extension String {
-    var isValidEmail: Bool {
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailRegex)
-        return emailPredicate.evaluate(with: self)
+    
+    struct LoginScreen_Previews: PreviewProvider {
+        static var previews: some View {
+            LoginScreen()
+        }
     }
     
-    var isValidPassword: Bool {
-        return count >= 6
+    extension String {
+        var isValidEmail: Bool {
+            let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+            let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailRegex)
+            return emailPredicate.evaluate(with: self)
+        }
+        
+        var isValidPassword: Bool {
+            return count >= 6
+        }
     }
-}
