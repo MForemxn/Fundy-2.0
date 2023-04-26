@@ -9,7 +9,12 @@ import SwiftUI
 
 struct ThisPageDoesNotExist: View {
     var body: some View {
-        Text("This Page Doesn't Exist Yet... Check Back Soon :)")
+        Text("Your Login Credentials Are Incorrect")
+        Text("")
+        Text("Please use 'cameron@fundy.com' ")
+        Text("and 'password' if signing in")
+        Text("")
+        Text("or a valid email if creating an account")
     }
 }
 

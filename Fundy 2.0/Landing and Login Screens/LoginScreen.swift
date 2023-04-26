@@ -169,6 +169,6 @@ struct LoginScreen: View {
         }
         
         var isValidPassword: Bool {
-            return count >= 6
+            return true
         }
     }

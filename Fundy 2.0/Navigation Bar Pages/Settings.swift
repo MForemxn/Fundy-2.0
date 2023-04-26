@@ -34,7 +34,6 @@ struct SettingsPage: View {
             }
             .navigationTitle("Settings")
         }
-        .background(Color.background)
     }
 }
 
@@ -58,7 +57,7 @@ struct SettingRowView: View {
 struct SettingDetailView: View {
     let setting: Setting
     @State private var isToggled: Bool = true
-    @State private var selectedOption: String = "AUD"
+    @State private var selectedOption: String = "USD"
     
     var body: some View {
         VStack {
@@ -85,7 +84,6 @@ struct SettingDetailView: View {
                 }
                 .pickerStyle(MenuPickerStyle())
                 .padding(.horizontal)
-                .background(Color.background)
             } else if setting.name == "Touch ID" {
                 Toggle("Enable Touch ID", isOn: $isToggled)
                     .padding(.horizontal)
@@ -93,6 +91,5 @@ struct SettingDetailView: View {
             Spacer()
         }
         .navigationTitle(setting.name)
-        .background(Color.background)
     }
 }
