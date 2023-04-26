@@ -24,6 +24,7 @@ final class TransactionListViewModel: ObservableObject {
     }
     
     func getTransactions() {
+        //did this one for flowchart
         guard let url = URL(string: "https://api.npoint.io/af9add659ccd98130350") else {
             print("Invalid URL")
             return
@@ -107,6 +108,7 @@ final class TransactionListViewModel: ObservableObject {
     
     
     func calculateSumOfExpensesInGivenCategory(categoryName: String) -> Double {
+        //did this one for flowchart
         var sumOfTransactionsInCategory: Double = 0
         for transaction in transactions {
             if transaction.category == categoryName && transaction.isExpense {

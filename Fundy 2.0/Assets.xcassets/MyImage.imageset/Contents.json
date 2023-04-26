@@ -1,17 +1,50 @@
 {
   "images" : [
     {
-      "filename" : "0x0.jpg",
+      "filename" : "landingscreenimage.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "0x0 1.jpg",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "landingscreenimage 3.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "landingscreenimage 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "0x0 2.jpg",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "landingscreenimage 4.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "landingscreenimage 2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "landingscreenimage 5.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
