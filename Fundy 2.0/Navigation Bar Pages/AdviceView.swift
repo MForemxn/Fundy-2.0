@@ -26,25 +26,25 @@ struct AdviceView: View {
     
     var body: some View {
         NavigationView {
-                List(actions) { action in
-                    NavigationLink(destination: ActionDetail(action: action), tag: action, selection: $selectedAction) {
-                        Text(action.title)
+            List(actions) { action in
+                NavigationLink(destination: ActionDetail(action: action), tag: action, selection: $selectedAction) {
+                    Text(action.title)
+                }
+            }
+            .navigationBarTitle("Finance Actions")
+            .background(Color.background)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem {
+                    NavigationLink {
+                        NotificationsView()
+                    } label: {
+                        Image(systemName: "bell.badge")
+                            .symbolRenderingMode(.palette)
+                            .foregroundStyle(Color.icon, .primary)
                     }
                 }
-                .navigationBarTitle("Finance Actions")
-                .background(Color.background)
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem {
-                        NavigationLink {
-                            NotificationsView()
-                        } label: {
-                            Image(systemName: "bell.badge")
-                                .symbolRenderingMode(.palette)
-                                .foregroundStyle(Color.icon, .primary)
-                        }
-                    }
-                }
+            }
         }
     }
     

@@ -5,14 +5,20 @@
 //  Created by Mason Foreman on 28/3/2023.
 //
 
-
+//imports swiftUI framework
 import SwiftUI
 
+//creates a new view, conforms to the View protocol
 struct WhatsNewView: View {
+    
+    //@environment used to reference the dismiss method, so that the dismiss button can be changed
     @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         ScrollView {
             VStack {
+                //body property is implimented, and within it is nested a vstack and a scrollview
+                
                 Text("What's New in Fundy")
                     .font(.largeTitle.weight(.bold))
                     .frame(width: 240)
@@ -124,9 +130,6 @@ struct WhatsNewView: View {
         .padding(.bottom, 0)
         .padding(.horizontal, 29)
         .overlay(alignment: .top) {
-            Group {
-                
-            }
         }
     }
 }

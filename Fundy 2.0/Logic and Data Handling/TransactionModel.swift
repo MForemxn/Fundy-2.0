@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUIFontIcon
 
+
+//The Transaction struct has properties such as id, date, institution, account, merchant, amount, type, categoryId, category, isPending, isTransfer, isExpense, isEdited, icon, dateParsed, signedAmount, and month. The struct adopts the Identifiable, Decodable, and Hashable protocols.
 struct Transaction: Identifiable, Decodable, Hashable {
     let id: Int
     let date: String
@@ -27,8 +29,8 @@ struct Transaction: Identifiable, Decodable, Hashable {
         if let category = Category.allCategories.first(where: { $0.id == categoryId }) {
             return category.icon
         }
-            return .question
-            
+        return .question
+        
     }
     
     var dateParsed: Date {
@@ -44,11 +46,15 @@ struct Transaction: Identifiable, Decodable, Hashable {
     }
 }
 
+
+//The TransactionType enum is an enumeration that has two cases: debit and credit.
 enum TransactionType: String {
     case debit = "debit"
     case credit = "credit"
 }
 
+
+//The Category struct has properties such as id, name, icon, and mainCategoryId. It also has static properties for various categories such as autoAndTransport, billsAndUtilities, entertainment, etc. The struct has an extension with computed static properties for categories, subCategories, and allCategories.
 struct Category {
     let id: Int
     let name: String
@@ -56,6 +62,8 @@ struct Category {
     var mainCategoryId: Int?
 }
 
+
+//The extensions to Transaction and Category provide additional computed properties and methods. For example, the Transaction extension provides computed properties for icon, dateParsed, signedAmount, and month. The Category extension provides computed static properties for categories, subCategories, allCategories, and allTransactionNames.
 extension Category {
     static let autoAndTransport = Category(id: 1, name: "Auto & Transport", icon: .car_alt)
     static let billsAndUtilities = Category(id: 2, name: "Bills and Utilities", icon: .file_invoice_dollar)
@@ -83,40 +91,41 @@ extension Category {
     
 }
 
+
+//The extensions to Transaction and Category provide additional computed properties and methods. For example, the Transaction extension provides computed properties for icon, dateParsed, signedAmount, and month. The Category extension provides computed static properties for categories, subCategories, allCategories, and allTransactionNames.
 extension Category {
     static let categories: [Category] = [
-            .autoAndTransport,
-            .billsAndUtilities,
-            .entertainment,
-            .feesAndCharges,
-            .foodAndDining,
-            .home,
-            .income,
-            .shopping,
-            .transfer
+        .autoAndTransport,
+        .billsAndUtilities,
+        .entertainment,
+        .feesAndCharges,
+        .foodAndDining,
+        .home,
+        .income,
+        .shopping,
+        .transfer
     ]
     static let subCategories: [Category] = [
-            .publicTransportation,
-            .taxi,
-            .mobilePhone,
-            .moviesAndDVDs,
-            .bankFee,
-            .financeCharge,
-            .groceries,
-            .restraunts,
-            .rent,
-            .homeSupplies,
-            .paycheque,
-            .software,
-            .creditCardPayment
+        .publicTransportation,
+        .taxi,
+        .mobilePhone,
+        .moviesAndDVDs,
+        .bankFee,
+        .financeCharge,
+        .groceries,
+        .restraunts,
+        .rent,
+        .homeSupplies,
+        .paycheque,
+        .software,
+        .creditCardPayment
     ]
     static let allCategories: [Category] = categories + subCategories
 }
 
+
+//The extensions to Transaction and Category provide additional computed properties and methods. For example, the Transaction extension provides computed properties for icon, dateParsed, signedAmount, and month. The Category extension provides computed static properties for categories, subCategories, allCategories, and allTransactionNames.
 extension Category {
     static let allTransactionNames: [String] = ["Auto & Transport", "Bills and Utilities", "Entertainment", "Fees & Charges", "Food and Dining", "Home", "Income", "Shopping", "Transfer", "Public Transportation", "Taxi", "Mobile Phone", "Movies and DVD's", "Bank Fees", "Finance Charge", "Groceries", "Restaurants", "Rent", "Home Supplies", "Pay Cheque", "Software", "Credit Card Payment"]
-
+    
 }
-
-
-

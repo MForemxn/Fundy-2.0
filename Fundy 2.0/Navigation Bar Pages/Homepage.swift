@@ -45,8 +45,8 @@ struct Homepage: View {
                     whatsNewSheetHasBeenShown = true
                 }
             }
-                .sheet(isPresented: $whatsNewSheetHasBeenShown) {
-                    WhatsNewView()
+            .sheet(isPresented: $whatsNewSheetHasBeenShown) {
+                WhatsNewView()
             }
         }
     }

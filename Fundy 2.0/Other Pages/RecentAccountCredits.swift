@@ -24,7 +24,7 @@ struct RecentAccountCredits: View {
                 
                 // MARK: Chart
                 let data = transactionListVM.accumulateTransactions()
-
+                
                 
                 if !data.isEmpty {
                     let totalExpenses = data.last?.1 ?? 0

@@ -11,29 +11,29 @@ struct TransactionList: View {
     @EnvironmentObject var transactionListVM: TransactionListViewModel
     
     var body: some View {
-            VStack{
-                List {
-                    // MARK: Transaction Groups
-                    ForEach(Array(transactionListVM.groupTransactionByMonth()), id: \.key, content: { month,
-                        transactions in
-                        Section {
-                            // MARK: Transaction List
-                            ForEach(transactions) { transaction in
-                                TransactionRow(transaction: transaction)
-                            }
-                        } header: {
-                            // MARK: Transaction Month
-                            Text(month)
+        VStack{
+            List {
+                // MARK: Transaction Groups
+                ForEach(Array(transactionListVM.groupTransactionByMonth()), id: \.key, content: { month,
+                    transactions in
+                    Section {
+                        // MARK: Transaction List
+                        ForEach(transactions) { transaction in
+                            TransactionRow(transaction: transaction)
                         }
-                        .listSectionSeparator(.hidden)
-                        
+                    } header: {
+                        // MARK: Transaction Month
+                        Text(month)
                     }
-                    )}
-                
-                .listStyle(.plain)
-            }
-            .navigationTitle("Transactions")
-            .navigationBarTitleDisplayMode(.inline)
+                    .listSectionSeparator(.hidden)
+                    
+                }
+                )}
+            
+            .listStyle(.plain)
+        }
+        .navigationTitle("Transactions")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

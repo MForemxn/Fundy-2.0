@@ -23,6 +23,7 @@ final class TransactionListViewModel: ObservableObject {
         
     }
     
+    //function retrieves transaction data from a RESTful API endpoint using an HTTP request. The data is decoded using JSONDecoder and assigned to the transactions property. The function also logs errors and the completion of the fetch.
     func getTransactions() {
         //did this one for flowchart
         guard let url = URL(string: "https://api.npoint.io/af9add659ccd98130350") else {
@@ -97,6 +98,8 @@ final class TransactionListViewModel: ObservableObject {
     
     static let allTransactionNames: [String] = ["Auto & Transport", "Bills and Utilities", "Entertainment", "Fees & Charges", "Food and Dining", "Home", "Income", "Shopping", "Transfer", "Public Transportation", "Taxi", "Mobile Phone", "Movies and DVD's", "Bank Fees", "Finance Charge", "Groceries", "Restaurants", "Rent", "Home Supplies", "Pay Cheque", "Software", "Credit Card Payment"]
     
+    
+    //helper function for getTransactions
     func calculateSumOfAllTransactions() -> Double {
         var total: Double = 0
         for transaction in transactions {
@@ -106,7 +109,7 @@ final class TransactionListViewModel: ObservableObject {
     }
     
     
-    
+    //helper function for getTransactions
     func calculateSumOfExpensesInGivenCategory(categoryName: String) -> Double {
         //did this one for flowchart
         var sumOfTransactionsInCategory: Double = 0
@@ -119,6 +122,7 @@ final class TransactionListViewModel: ObservableObject {
         return sumOfTransactionsInCategory
     }
     
+    //helper function for getTransactions
     func determineAllCategoryExpenseTotals() -> [Double] {
         var allCategoryTotalsInOrder: [Double] = []
         for Category in TransactionListViewModel.allTransactionNames {
@@ -128,6 +132,8 @@ final class TransactionListViewModel: ObservableObject {
         return allCategoryTotalsInOrder
     }
     
+    
+    //combines all transaction categories with their respective sums
     func combineCategoriesWithSums() -> [(categoryName: String, sumTotal: Double)] {
         let categories: [String] = allTransactionCategoryNames
         let values: [Double] = determineAllCategoryExpenseTotals()
@@ -141,6 +147,7 @@ final class TransactionListViewModel: ObservableObject {
         return combinedArrayofTransactionSumsAndCategories
     }
     
+    //sorts and returns the top three biggest categories based on their sums.
     func findThe3BiggestCategoriesSums() -> [Double] {
         var combinedArray: [(categoryName: String, sumTotal: Double)] = combineCategoriesWithSums()
         
