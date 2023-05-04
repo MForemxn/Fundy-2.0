@@ -34,8 +34,4 @@ struct RecentAccountCredits: View {
         }
     }
 }
-struct RecentAccountCredits_Previews: PreviewProvider {
-    static var previews: some View {
-        RecentAccountCredits()
-    }
-}
+

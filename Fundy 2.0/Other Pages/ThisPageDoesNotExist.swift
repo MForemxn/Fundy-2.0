@@ -18,8 +18,4 @@ struct ThisPageDoesNotExist: View {
     }
 }
 
-struct ThisPageDoesNotExist_Previews: PreviewProvider {
-    static var previews: some View {
-        ThisPageDoesNotExist()
-    }
-}
+

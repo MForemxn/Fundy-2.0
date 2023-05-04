@@ -47,19 +47,3 @@ struct OverviewView: View {
     }
 }
 
-struct OverviewView_Previews: PreviewProvider {
-    static let transactionListVM: TransactionListViewModel = {
-        let TransactionListVM = TransactionListViewModel()
-        transactionListVM.transactions = transactionListPreviewData
-        return TransactionListVM
-    } ()
-    
-    static var previews: some View {
-        Group {
-            ContentView()
-            ContentView()
-                .preferredColorScheme(.dark)
-        }
-        .environmentObject(transactionListVM)
-    }
-}

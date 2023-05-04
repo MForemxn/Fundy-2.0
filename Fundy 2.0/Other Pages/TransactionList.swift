@@ -37,23 +37,4 @@ struct TransactionList: View {
     }
 }
 
-struct TransactionList_Previews: PreviewProvider {
-    static let transactionListVM: TransactionListViewModel = {
-        let TransactionListVM = TransactionListViewModel()
-        transactionListVM.transactions = transactionListPreviewData
-        return TransactionListVM
-    } ()
-    
-    static var previews: some View {
-        Group {
-            NavigationView {
-                TransactionList()
-            }
-            NavigationView  {
-                TransactionList()
-                    .preferredColorScheme(.dark)
-            }
-        }
-        .environmentObject(transactionListVM)
-    }
-}
+

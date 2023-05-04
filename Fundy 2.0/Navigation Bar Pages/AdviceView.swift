@@ -76,8 +76,4 @@ struct AdviceView: View {
     }
 }
 
-struct AdviceView_Previews: PreviewProvider {
-    static var previews: some View {
-        AdviceView()
-    }
-}
+

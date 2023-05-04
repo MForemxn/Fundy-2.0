@@ -50,8 +50,3 @@ struct TransactionRow: View {
     }
 }
 
-struct TransactionRow_Previews: PreviewProvider {
-    static var previews: some View {
-        TransactionRow(transaction: TransactionPreviewData)
-    }
-}
